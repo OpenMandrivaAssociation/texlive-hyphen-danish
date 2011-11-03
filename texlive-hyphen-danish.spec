@@ -1,3 +1,9 @@
+# revision 23085
+# category TLCore
+# catalog-ctan /language/hyphenation/dkhyphen
+# catalog-date 2009-09-25 22:54:35 +0200
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-hyphen-danish
 Version:	20090925
 Release:	1
@@ -46,6 +52,7 @@ Hyphenation patterns for Danish in T1/EC and UTF-8 encodings.
 %_texmf_language_dat_d/hyphen-danish
 %_texmf_language_def_d/hyphen-danish
 %_texmf_language_lua_d/hyphen-danish
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -54,6 +61,8 @@ Hyphenation patterns for Danish in T1/EC and UTF-8 encodings.
 %build
 
 %install
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
 mkdir -p %{buildroot}%{_texmf_language_dat_d}
 cat > %{buildroot}%{_texmf_language_dat_d}/hyphen-danish <<EOF
 %% from hyphen-danish:
