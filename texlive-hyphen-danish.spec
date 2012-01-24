@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-hyphen-danish
 Version:	20090925
-Release:	2
+Release:	1
 Summary:	Danish hyphenation patterns
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/hyphenation/dkhyphen
@@ -44,14 +44,16 @@ Hyphenation patterns for Danish in T1/EC and UTF-8 encodings.
 %install
 mkdir -p %{buildroot}%{_texmf_language_dat_d}
 cat > %{buildroot}%{_texmf_language_dat_d}/hyphen-danish <<EOF
-\%\% from hyphen-danish:
+\%% from hyphen-danish:
 danish loadhyph-da.tex
 EOF
+perl -pi -e 's|\\%%|%%|;' %{buildroot}%{_texmf_language_dat_d}/hyphen-danish
 mkdir -p %{buildroot}%{_texmf_language_def_d}
 cat > %{buildroot}%{_texmf_language_def_d}/hyphen-danish <<EOF
-\%\% from hyphen-danish:
+\%% from hyphen-danish:
 \addlanguage{danish}{loadhyph-da.tex}{}{2}{2}
 EOF
+perl -pi -e 's|\\%%|%%|;' %{buildroot}%{_texmf_language_def_d}/hyphen-danish
 mkdir -p %{buildroot}%{_texmf_language_lua_d}
 cat > %{buildroot}%{_texmf_language_lua_d}/hyphen-danish <<EOF
 -- from hyphen-danish:
