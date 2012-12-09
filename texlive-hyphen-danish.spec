@@ -66,3 +66,22 @@ cat > %{buildroot}%{_texmf_language_lua_d}/hyphen-danish <<EOF
 		hyphenation = '',
 	},
 EOF
+
+
+%changelog
+* Tue Jan 24 2012 Paulo Andrade <pcpa@mandriva.com.br> 20090925-3
++ Revision: 767534
+- Add workaround to rpm bug that broke hyphenation files
+- Add workaround to rpm bug that broke hyphenation files
+
+* Wed Jan 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 20090925-2
++ Revision: 759905
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20090925-1
++ Revision: 718646
+- texlive-hyphen-danish
+- texlive-hyphen-danish
+- texlive-hyphen-danish
+- texlive-hyphen-danish
+
