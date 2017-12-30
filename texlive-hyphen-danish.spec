@@ -5,8 +5,8 @@
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-hyphen-danish
-Version:	20090925
-Release:	11
+Version:	20170414
+Release:	1
 Summary:	Danish hyphenation patterns
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/hyphenation/dkhyphen
