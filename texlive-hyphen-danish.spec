@@ -5,7 +5,7 @@
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-hyphen-danish
-Version:	20181105
+Version:	20190406
 Release:	1
 Summary:	Danish hyphenation patterns
 Group:		Publishing
