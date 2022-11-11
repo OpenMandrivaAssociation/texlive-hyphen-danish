@@ -1,17 +1,11 @@
-# revision 23085
-# category TLCore
-# catalog-ctan /language/hyphenation/dkhyphen
-# catalog-date 2009-09-25 22:54:35 +0200
-# catalog-license lppl
-# catalog-version undef
 Name:		texlive-hyphen-danish
-Version:	20190406
+Version:	58652
 Release:	1
 Summary:	Danish hyphenation patterns
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/hyphenation/dkhyphen
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hyphen-danish.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hyphen-danish.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -22,12 +16,12 @@ Requires:	texlive-hyph-utf8
 Hyphenation patterns for Danish in T1/EC and UTF-8 encodings.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -39,7 +33,7 @@ Hyphenation patterns for Danish in T1/EC and UTF-8 encodings.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0
+%autosetup -p1 -c
 
 %build
 
@@ -71,22 +65,3 @@ cat > %{buildroot}%{_texmf_language_lua_d}/hyphen-danish <<EOF
 		hyphenation = '',
 	},
 EOF
-
-
-%changelog
-* Tue Jan 24 2012 Paulo Andrade <pcpa@mandriva.com.br> 20090925-3
-+ Revision: 767534
-- Add workaround to rpm bug that broke hyphenation files
-- Add workaround to rpm bug that broke hyphenation files
-
-* Wed Jan 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 20090925-2
-+ Revision: 759905
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20090925-1
-+ Revision: 718646
-- texlive-hyphen-danish
-- texlive-hyphen-danish
-- texlive-hyphen-danish
-- texlive-hyphen-danish
-
