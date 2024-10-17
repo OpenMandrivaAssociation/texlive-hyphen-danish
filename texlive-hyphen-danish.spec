@@ -3,7 +3,7 @@ Version:	58652
 Release:	2
 Summary:	Danish hyphenation patterns
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/language/hyphenation/dkhyphen
+URL:		https://www.ctan.org/tex-archive/language/hyphenation/dkhyphen
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hyphen-danish.r%{version}.tar.xz
 BuildArch:	noarch
